@@ -17,7 +17,7 @@ const [currState,setCurrState] = useState("Login")
                     {currState === "Login"?<></>:<input type="text" placeholder='Your name' required />}
                     
                     <input type="email" placeholder='Your e-mail' required />
-                    <input type="phone number" placeholder='Your phone number' required />
+                    {currState === "Sign Up" && <input type="tel" placeholder='Your phone number' required />}
                     <input type="password" placeholder='Password' required />
                 </div>
                 <button>{currState==="Sign Up" ? "Create account" : "Login"}</button>
