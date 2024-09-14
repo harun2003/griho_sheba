@@ -1,24 +1,31 @@
-
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './component/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import { useState } from 'react';
 import LoginPopup from './component/LoginPopup/LoginPopup';
-const App = () => {
+import SignUpPopup from './component/SignupPopUp/SignUpPopup';
 
-  const [showLogin,setShowLogin] = useState(false)
+const App = () => {
+  const [showLogin, setShowLogin] = useState(false);
+  const [isSignUp, setIsSignUp] = useState(false); // Track the form state
 
   return (
-   <>
-    {showLogin?<LoginPopup setShowLogin={setShowLogin}/>:<></>}
-    <div className="app">
-      <Navbar setShowLogin={setShowLogin}/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-      </Routes>
+    <>
+      {/* Conditionally render LoginPopup or SignUpPopup based on state */}
+      {showLogin ? (
+        isSignUp ? (
+          <SignUpPopup setShowLogin={setShowLogin} setIsSignUp={setIsSignUp} />
+        ) : (
+          <LoginPopup setShowLogin={setShowLogin} setIsSignUp={setIsSignUp} />
+        )
+      ) : null}
       
-       
-    </div>
+      <div className="app">
+        <Navbar setShowLogin={setShowLogin} setIsSignUp={setIsSignUp} />
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </div>
     </>
   );
 };
