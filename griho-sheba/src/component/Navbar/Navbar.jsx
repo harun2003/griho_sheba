@@ -6,8 +6,8 @@ const Navbar = ({ setShowLogin, setIsSignUp }) => {
   const [menu, setMenu] = useState("home");
 
   const handleSignIn = () => {
-    setIsSignUp(false); // Always default to showing the login popup
-    setShowLogin(true); // Show the popup when clicked
+    setIsSignUp(false);
+    setShowLogin(true);
   };
 
   return (

@@ -7,11 +7,11 @@ import SignUpPopup from './component/SignupPopUp/SignUpPopup';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
-  const [isSignUp, setIsSignUp] = useState(false); // Track the form state
+  const [isSignUp, setIsSignUp] = useState(false); 
 
   return (
     <>
-      {/* Conditionally render LoginPopup or SignUpPopup based on state */}
+      {}
       {showLogin ? (
         isSignUp ? (
           <SignUpPopup setShowLogin={setShowLogin} setIsSignUp={setIsSignUp} />

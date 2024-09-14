@@ -74,7 +74,6 @@
     cursor: pointer;
 }
 
-/* Fade-in animation for smooth popup appearance */
 @keyframes fadeIn {
     from {
         opacity: 0;

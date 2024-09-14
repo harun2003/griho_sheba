@@ -10,7 +10,7 @@ const LoginPopup = ({ setShowLogin, setIsSignUp }) => {
             <form className="login-popup-container">
                 <div className="login-popup-title">
                     <h2>{currState}</h2>
-                    {/* Close the popup */}
+                    {}
                     <img onClick={() => setShowLogin(false)} src={assets.cross_icon} alt="close" />
                 </div>
 
@@ -29,15 +29,15 @@ const LoginPopup = ({ setShowLogin, setIsSignUp }) => {
                     <p>By continuing, I agree to the terms of use & privacy policy.</p>
                 </div>
 
-                {/* Switch between Login and Sign Up */}
+                {}
                 {currState === "Login" ? (
                     <p>Want to create a new account? 
-                        {/* Switch to Sign Up */}
-                        <span onClick={() => setIsSignUp(true)}>Click here</span> {/* Change this to setIsSignUp(true) */}
+                        {}
+                        <span onClick={() => setIsSignUp(true)}>Click here</span> {}
                     </p>
                 ) : (
                     <p>Already have an account? 
-                        {/* Switch to Login */}
+                        {}
                         <span onClick={() => setCurrState("Login")}>Login here</span>
                     </p>
                 )}
