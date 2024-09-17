@@ -1,7 +1,7 @@
 //import React from 'react';
 import  './exploreservice.css'
 import { service_list } from '../../assets/assets';
-const ExploreService = () => {
+const ExploreService = ({category, setCategory}) => {
     return (
         <div className='explore-service' id='explore-menu'>
             <h1>Explore our services</h1>
@@ -10,8 +10,8 @@ const ExploreService = () => {
             
                 {service_list.map((item,index)=>{
                     return (
-                        <div key={index} className="explore-service-list-item">
-                            <img src={item.service_image} alt="" />
+                        <div onClick={()=>setCategory(prev=>prev===item.service_name?"All": item.service_name)} key={index} className="explore-service-list-item">
+                            <img className={category===item.service_name?"active": ""} src={item.service_image} alt="" />
                             <p>{item.service_name}</p>
                         </div>
                     )

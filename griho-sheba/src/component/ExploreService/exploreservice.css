@@ -46,3 +46,8 @@
     border: none; 
 
 }
+
+ .explore-service-list-item .active{
+    border: 3px solid teal;
+    padding: 2px;
+ }
