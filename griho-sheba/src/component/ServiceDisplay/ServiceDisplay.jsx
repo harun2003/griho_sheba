@@ -11,11 +11,14 @@ const ServiceDisplay = ({category}) => {
             <h2>Quality services near you</h2>
             <div className="service-displai-list">
                 {solution_list.map((item,index)=>{
-                     return  <ServiceItem  key={index}
-                     id={item._id} 
-                     name={item.name} 
-                     description={item.description} 
-                     image={item.image}/>
+                    if(category==="All" || category===item.category){
+                        return  <ServiceItem  key={index}
+                        id={item._id} 
+                        name={item.name} 
+                        description={item.description} 
+                        image={item.image}/>
+                    }
+                     
                 })}
             </div>
         </div>

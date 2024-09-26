@@ -4,6 +4,7 @@ import ExploreService from '../../component/ExploreService/ExploreService';
 import Header from '../../component/Header/Header';
 import './home.css'
 import ServiceDisplay from '../../component/ServiceDisplay/ServiceDisplay';
+import AppDownload from '../../component/appDownload/AppDownload';
 const Home = () => {
 
   const [category,setCategory] = useState("All");
@@ -13,6 +14,7 @@ const Home = () => {
             <Header/>
             <ExploreService category={category} setCategory={setCategory}/>
             <ServiceDisplay category={category}/>
+            <AppDownload/>
         </div>
     );
 };

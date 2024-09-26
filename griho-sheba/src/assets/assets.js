@@ -10,6 +10,11 @@ import service_5 from './service_5.png'
 import service_6 from './service_6.png'
 import cross_icon from './cross_icon.png'
 import rating_starts from './rating_starts.png'
+import facebook_icon from './facebook_icon.png'
+import linkedin_icon from './linkedin_icon.png'
+import twitter_icon from './twitter_icon.png'
+import play_stor from './play_store.png'
+import app_store from './app_store.png'
 
 import solution_1 from './solution_1.jpg'
 import solution_2 from './solution_2.jpg'
@@ -36,7 +41,12 @@ export const assets ={
     search_icon,
     location_icon,
     cross_icon,
-    rating_starts
+    rating_starts,
+    facebook_icon,
+    linkedin_icon,
+    twitter_icon,
+    play_stor,
+    app_store
 }
 
 export const service_list = [
@@ -88,7 +98,7 @@ export const solution_list = [
         name: "Air Filter Replacement",
         image: solution_3,
         description: "Breathe Easy, Refresh your drive with a New Air Filter!",
-        category: "Car Services"
+        category: "Car Service"
     }, {
         _id: "4",
         name: "Washroom Fitting",

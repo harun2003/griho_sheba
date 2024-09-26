@@ -4,6 +4,7 @@ import Home from './pages/Home/Home';
 import { useState } from 'react';
 import LoginPopup from './component/LoginPopup/LoginPopup';
 import SignUpPopup from './component/SignupPopUp/SignUpPopup';
+import Footer from './component/Footer/Footer';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -26,6 +27,7 @@ const App = () => {
           <Route path='/' element={<Home />} />
         </Routes>
       </div>
+      <Footer/>
     </>
   );
 };
